@@ -1,0 +1,309 @@
+/* [title] - Custom Style sheet */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/*! CSS Compiled on: #{timestamp()} by [DJ] */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/* This is a feature change */ 
+
+//* - - - - - - - - - - - - - - - - - - - - - - - - */
+//* set up variables */
+$navHeight: 65px; //global - app nav
+
+
+/* colors */
+$nightText: #ebebeb;
+$nightBack: #121212;
+
+$sidebox1: rgba(223, 233, 208, 1); /* light green/gray/tan background for side box */
+$sidebox2: rgba(239, 232, 195, 1); /* light tan background for side box */
+
+/* baseURI for each month */
+$januaryURI: january-heavenly-father-prepared-a-way-for-me-to-return-to-his-presence;
+$februaryURI: february-heavenly-father-has-a-plan-for-his-children;    
+$marchURI: march-jesus-christ-is-our-savior; 
+$aprilURI: april-the-family-is-central-to-gods-plan; 
+$mayURI: may-families-are-blessed-when-they-follow-the-prophet;
+$juneURI: june-priesthood-ordinances-and-temple-work-bless-my-family;
+
+
+//* - - - - - - - - - - - - - - - - - - - - - - - - */
+//* set up mixins */
+//* - - - - - - - - - - - - - - - - - - - - - - - - */
+//* vendon prefixes - web calc */
+@mixin calc($property, $expression) {
+    #{$property}: -moz-calc(#{$expression});
+    #{$property}: -webkit-calc(#{$expression});
+    #{$property}: -o-calc()(#{$expression});
+    #{$property}: calc(#{$expression});
+}
+
+//* - - - - - - - - - - - - - - - - - - - - - - - - */
+//* styles for all chapters */
+
+#container{
+    padding: 116px 7%;
+}
+
+/* this controls the Month title*/
+.titleNumber {
+    width: 50%;
+    /* the Month titles ".titleNumber" has a padding: .6em .5em 2em .7em;
+    so we need to add .5em and .7em to the right side boxes below to make them match up */    
+
+    //change padding to PX
+    padding:10px 9px 36px 13px; // old way - padding:.6em .5em 2em .7em;
+    
+}
+
+/* this controls the song of the month text*/
+.sidebar {
+    top: -10em;
+    width: 50%;  
+}
+
+
+/* set box decor background to clear/none (or inherit) so that the rgba collors wont blend with previous colors */
+.box-decor {
+        background-color: none;
+        
+    }
+[uri*="2014"] .box-decor:not(.sidebar):nth-of-type(even) p, [uri*="2014"] .resources .box-decor:not(.sidebar):nth-of-type(odd) p {
+        background-color: inherit;
+        
+    }
+
+/* */
+.box-decor:not(.sidebar) p {
+    padding:14px 18px 18px 23px; // old way padding:.75em 1em 1em 1.25em;
+}
+
+/* this controls the right side boxes*/
+[uri*="2014"].box-decor:not(.box-right), .resources [uri*="2014"].box-decor:not(.box-right)  {
+    position: absolute;
+    @include calc( width, '50% + .5em + .7em'); /**/
+    max-width: 55%;  
+
+}
+
+/* this controls the right side boxes "in the resources section" */
+.resources [uri*="2014"].box-decor:not(.box-right) {
+    position: relative;  
+}
+
+.topic .image {
+    margin: 0;
+}
+
+//* - - - - - - - - - - - - - - - - - - - - - - - - */
+//* common positioning and size styles */
+        /* Left positioning */
+.titleNumber, .sidebar, .topic .image, [uri*="2014"].box-decor:not(.box-right), .resources [uri*="2014"].box-decor:not(.box-right), [uri$="#{$marchURI}"] .topic a [src*="jpg"]  {  
+    
+    @include calc( left, '100% + 36px'); //old way 100% + 2em
+    
+}
+        /* Width positioning */
+[uri$="#{$januaryURI}"] .caption .para[uri*=".p28"], [uri$="#{$marchURI}"] .topic a [src*="jpg"], [uri$="#{$mayURI}"] .topic .image[uri*=".f2"],  [uri$="#{$juneURI}"] .box-decor[uri*=".f4"] {
+
+    @include calc( width, '100% + 36px');  
+}
+
+
+//* - - - - - - - - - - - - - - - - - - - - - - - - */
+//* chapter specific styles */
+//list partial files
+
+/* Months that share rules *//* ---------------------------------------------------- */
+[uri$="#{$marchURI}"] .topic a [src*="jpg"], [uri$="#{$mayURI}"] .topic .image[uri*=".f2"] {
+        position: absolute;
+        top: 0;
+    }
+[uri$="#{$marchURI}"] .topic .box-decor[uri*=".f4"], [uri$="#{$juneURI}"] .box-decor[uri*=".f4"] {
+        background-color: #efe8c3;
+        position: absolute;
+        width: 53%;
+    }
+
+/* January *//* ---------------------------------------------------- */
+[uri$="#{$januaryURI}"] {
+ 
+    /* "invite participation" side box */
+    .box-decor[uri*=".f2"] {
+        background-color: $sidebox2;
+        top: 0;
+    }
+    
+
+    /* caption box "Class teachers" */
+    .caption .para[uri*=".p28"] {
+        position: absolute;
+        top: 20em;
+        width: 60%;  
+    } 
+
+
+    /* Tip side box*/
+    .box-decor[uri*=".f5"] {
+        background-color: $sidebox1;
+        top: 0;
+    }
+    
+    /* "teach with the spirit" side box */
+    .box-decor[uri*=".f7"] {
+        background-color: $sidebox2;
+        top: -10em;
+    }
+        
+}
+
+/* February *//* ---------------------------------------------------- */
+[uri$="#{$februaryURI}"] {
+    
+    /* out of position green side box; should be at the bottom of the section*/ 
+    [uri*=".f2"]{
+        bottom: 5em; 
+        background-color: $sidebox1;
+    }
+    
+    /* Parent container box for the "boy" image and "visuals" text box*/
+   .box-decor[uri*=".f3"] {
+        top: -35em;
+    }
+
+    /* change the background of the "visuals" box under the image of the boy */
+    .box-decor [uri*=".p30"] {
+       background-color: $sidebox2;
+    }
+    
+     /* change the background of the "visuals" box under the image of the boy */
+    .box-decor[uri*=".f7"] {
+       background-color: $sidebox1;
+    }
+    
+    /* this is the parent for the "paper cube" image and caption */
+    .topic .image[uri*=".f5"] {
+        position: absolute;
+        max-width: 55%;
+        width:100%;
+        top: 30em;
+    } 
+    /* remove image margin cause scroll bar at bottome of the page*/
+    [uri*=".f"]:not(.box-decor){
+      margin: 0;  
+    }
+    
+    /* caption box under paper cube "Paper cube availables" */
+    .caption .para[uri*=".p21"] {
+        color:black;
+        /* width: 70%; */
+    } 
+}
+
+/* March *//* ---------------------------------------------------- */
+[uri$="#{$marchURI}"] {
+     
+    .topic a [src*="jpg"] {
+        width: 53%; /* if you change the width of the img you need to also change the top position of the box-decor (see below) */
+    } 
+
+    /* this is the games box; have to position it with pixels so that it will match up with the img that is above it */    
+    .topic .box-decor[uri*=".f4"] {
+        top: 405px;     
+    } 
+
+    /* The tip box is out of position; have to move it above the img*/
+    .resources .box-decor[uri*=".f5"]{
+            background-color: $sidebox1;
+            top:-50em;
+        }
+
+    /*adding bullets and spacing to the list in week1 */
+    [uri$="march-jesus-christ-is-our-savior.f2"] .para{
+            Margin: 0 0 0 5%;
+            line-height: 1em;
+        }
+    [uri$="march-jesus-christ-is-our-savior.f2"] .para:before{
+        content:'\00B7';padding-right:5px;
+        }
+
+}
+
+/* April *//* ---------------------------------------------------- */
+[uri$="#{$aprilURI}"] {
+  
+    /* "tip" side box */
+    .box-decor[uri*=".f2"] {
+        background-color: $sidebox1;
+    }
+    
+    /* "show love (week4)" side box */
+    .box-decor[uri*=".f4"] {
+        top: -50em;
+        background-color: $sidebox2;
+    }
+    
+}
+
+/* May *//* ---------------------------------------------------- */
+[uri$="#{$mayURI}"] {
+    
+    .topic .image[uri*=".f2"] {
+        border: 0;
+        padding: 0;
+        width: 55%; 
+    } 
+
+    
+    /* "Repeating the doctrine" side box */
+    .resources .box-decor[uri*=".f5"] {
+            top: -50em;
+            width: 55%;
+            background-color: $sidebox1;
+    }
+    
+    /* "Show love" side box */
+    .resources .box-decor[uri*=".f6"] {
+            top: -20em;
+            width: 55%;
+            background-color: $sidebox2;
+    }
+    
+}
+
+/* June *//* ---------------------------------------------------- */
+[uri$="#{$juneURI}"] {
+    
+    .topic a [src*="http"] {
+        padding: 0;
+        margin: 0;
+        width: 20%;
+        border: .3em solid white;
+    } 
+
+    /* Image and "teach others" text box and "Songs:" side box */
+    .box-decor[uri*=".f4"] {
+        top:-25em;
+    }
+    
+    /* "Teach others:" side box */
+    .box-decor p[uri*=".p20"] {
+        background-color: $sidebox1;
+    }
+    
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* night mode */
+@import 'nightScheme';
+
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* media queries */
+@import 'ipadPortrait';
+@import 'ipadLandscapeRCA';
+@import 'iphone5Landscape';
+@import 'iphoneLandscape';
+@import 'ipadPortraitRCA';
+@import 'iphonePortrait';
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* END OF STYLES */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */

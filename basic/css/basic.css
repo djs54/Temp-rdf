@@ -1,0 +1,38 @@
+/* [title] - Custom Style sheet */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* CSS Compiled on: Wed Mar 19 10:55:36 -0600 2014 by [joanna] */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* iOS Nav Bar - for testing ONLY */
+/*body:before {
+  content: "";
+  display: block;
+  height: 65px;
+  width: 100%;
+  background-color: #023656;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+} */
+/* night mode background - for testing ONLY */
+/*body[scheme="night"] {
+	background-color: $nightBack;
+} */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* night mode */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* media queries */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* iPad portrait */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* iPad landscape + RCA live width 704px */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* iPhone 5" landscape */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* iPhone landscape */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* iPad Portrait + RCA live width 448px */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* iPhone portrait */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* END OF STYLES */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */

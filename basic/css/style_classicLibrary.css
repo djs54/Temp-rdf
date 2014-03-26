@@ -1,0 +1,587 @@
+/* Classic Library Styles */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* 2013-11-08 */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Body Styles */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+body{
+	font-size:1em;
+	font-family:"Palatino-Roman";
+	line-height:1.33em;
+	text-align:left;
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Body Class Styles */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+.para,
+.preamble{
+	padding-bottom:.65em;
+	-webkit-hyphens:auto;
+	-webkit-hyphenate-limit-before:4;
+	-webkit-hyphenate-limit-after:3;
+}
+/* JH NOTE: Turned off hanging indent on addresses. It was causing problems when a whole address was wrapped in one element with br tags. */
+.address{
+	padding-left:1em;
+}
+/* JH NOTE: Turning this off for now. We couldn't figure out why it was there. */
+/*.address:nth-last-of-type(2){
+	padding-bottom:.65em;
+}*/
+/* JH NOTE: Adding address rules for 2013 Temple Schedule, but these should apply everywhere. See uri=/manual/2013-all-temple-schedule/ for examples. */
+.address br{
+	display:inline;
+}
+span.address{
+	display:block;
+}
+span.address:last-of-type{
+	padding-bottom:.65em;
+}
+/* SW NOTE: Reveiw the use of important and correct if necessary */
+p .textInput{
+	display:inline !important;
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Heading Class Styles */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+.titleNumber,
+.sectionTitle,
+.seriesTitle{
+	font-family:"HelveticaNeue-Bold";
+	font-size:.75em;
+	text-transform:uppercase;
+	letter-spacing:.13em;
+	padding-bottom:.1em;
+}
+h1{
+	font-family:"HelveticaNeue-Light";
+	font-size:2em;
+	line-height:1.15em;
+	border-top:1px solid;
+	padding-bottom:1.5em;
+	padding-top:.25em;
+	padding-right:2em;
+	/* JH NOTE: Testing hyphenation on titles */
+		-webkit-hyphens:auto;
+		-webkit-hyphenate-limit-before:5;
+		-webkit-hyphenate-limit-after:3;
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* h1 Variations */
+h1 > .emphasis{
+	font-family:"HelveticaNeue-LightItalic";
+}
+.heading > .subtitle{
+	font-family:"HelveticaNeue-Light";
+	font-size:1.5em;
+	line-height:1.15em;
+	padding-bottom:2em;
+	margin-top:-2em;
+	padding-right:2em;
+}
+/* JH NOTE: Fixes subtitles that are wrapped in "strong." */
+.heading > .subtitle > .strong{
+	font-family:"HelveticaNeue-Light";
+}
+h2{
+	font-family:"HelveticaNeue-Bold";
+	font-size:1em;
+	line-height:1.15em;
+	border-top:1px solid;
+	padding-top:.10em;
+	margin-top:1em;
+	margin-bottom:.65em;
+	padding-right:4em;
+}
+/* JH NOTE: Emphasis in headings needs to be bold and italic, not just italic. */
+h2 .emphasis{
+	font-family:"HelveticaNeue-BoldItalic";
+}
+h3{
+	font-family:"HelveticaNeue-Bold";
+	font-size:.9em;
+	line-height:1.15em;
+	padding-bottom:.62em;
+	padding-top:.33em;
+	padding-right:4em;
+}
+h4{
+	font-family:"HelveticaNeue-BoldItalic";
+	font-size:.85em;
+	line-height:1.15em;
+	padding-bottom:.62em;
+	padding-top:.33em;
+	padding-right:4em;
+}
+h5,
+.teachingMethod > h3{
+	/* JH NOTE: Adding a font fallback to compensate for font bug in iOS 7.0.3 */
+	font-family:"HelveticaNeue-Italic", "Helvetica-Oblique";
+	font-size:.88em;
+	line-height:1.15em;
+	padding-bottom:.65em;
+	padding-top:.13em;
+	padding-right:4em;
+}
+.topic > .subtitle{
+	/* JH NOTE: Adding a font fallback to compensate for font bug in iOS 7.0.3 */
+	font-family:"HelveticaNeue-Italic", "Helvetica-Oblique";
+	font-size:.88em;
+	line-height:1.15em;
+	padding-bottom:.65em;
+	padding-right:4em;
+}
+[uri ^= '/manual/marriage-and-family-relations-participants-study-guide/'] .topic > .subtitle br{
+	display:inline;
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Spacing Variations For Titling */
+/* SW NOTE: Becasue of the pageBreak class that might happen between elements we will need to include selector to account for this when using the "+" selector. */
+h2 + .topic > h3,
+h2 + .pageBreak + .topic > h3,
+h3 + .topic > h4
+h3 + .pageBreak + .topic > h4{
+	padding-top:0em;
+}
+/* SW NOTE: beginning to style callout same as intro and kicker, may need to do more with as I see its use. They didn't use citation info so I can't style differently on Daughters in my Kindgdom stuff */
+.intro,
+.kicker,
+.epigraph{
+	font-family:"HelveticaNeue-LightItalic";
+	padding-bottom:1.5em;
+	-webkit-hyphens:auto;
+	-webkit-hyphenate-limit-before:4;
+	-webkit-hyphenate-limit-after:3;
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Intro Variations */
+.intro .emphasis,
+.kicker .emphasis,
+.epigraph .emphasis{
+	font-family:"HelveticaNeue-Light";
+}
+.intro .strong,
+.kicker .strong,
+.epigraph .strong{
+	font-family:"HelveticaNeue-BoldItalic";
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Heading Span Styles */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+h2 > .dominant,
+h3 > .dominant{
+	font-family:"HelveticaNeue-Light";
+	font-size:.88em;
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Caption and Annotation Styles */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+.caption > .para,
+.caption > p, /* JH NOTE: Added this back in until structure is fixed. */
+.annotation > .para{
+	font-family:"HelveticaNeue-LightItalic";
+	font-size:.8em;
+	line-height:1.33em;
+	color:#7d7d7d;
+}
+.caption > .para .emphasis,
+.caption > p .emphasis,  /* JH NOTE: Added this back in until structure is fixed. */
+.annotation > .para .emphasis{
+	font-family:"HelveticaNeue-Light";
+}
+.caption > .para .strong,
+.caption > p .strong,  /* JH NOTE: Added this back in until structure is fixed. */
+.annotation > .para .strong{
+	font-family:"HelveticaNeue-BoldItalic";
+}
+/* JH NOTE: Right now the "image" class isn't there. This will work when it shows up. */
+.image{
+	padding-bottom:1.25em;
+}
+.image img{
+	padding-bottom:.5em;
+}
+.img-full-width{
+	padding-bottom:.65em;
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Sidebar Styles */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+.sidebar{
+	border:2px solid #B2BBD7;
+	padding:.5em .75em .75em .75em;
+	background-color:rgba(178, 187, 215, 0.2);
+	margin:.5em 0 1.5em 0;
+	-webkit-border-top-left-radius:.75em;
+	-webkit-border-bottom-right-radius:.75em;
+}
+.sidebar ul,
+.sidebar ol{
+	color:#7d7d7d;
+}
+.sidebar .para,
+.sidebar .preamble{
+	font-family:"HelveticaNeue";
+	color:#7d7d7d;
+	font-size:.8em;
+	line-height:1.33em;
+}
+.sidebar .para .emphasis{
+	/* JH NOTE: Adding a font fallback to compensate for font bug in iOS 7.0.3 */
+	font-family:"HelveticaNeue-Italic", "Helvetica-Oblique";
+}
+/* SW NOTE: sidebars should be counted over like other figure types, shouldn't start with h2*/
+/* JH NOTE: Changed all .sidebar > h2's to h1's. */
+.sidebar > h1{
+	font-family:"HelveticaNeue-Bold";
+	/*color:black;*/
+	font-size:1em;
+	line-height:1.15em;
+	border-top:none;
+	padding-top:.3em;
+	margin-top:0;
+	margin-bottom:.6em;
+	padding-right:2em;
+	padding-bottom:0;
+}
+/* SW NOTE: Here is another h2 in a ul list */
+.sidebar > ul > h1{
+	font-family:"HelveticaNeue-BoldItalic";
+	/*color:black;*/
+	font-size:.8em;
+	line-height:1.15em;
+	padding-bottom:.62em;
+	padding-top:.33em;
+	padding-right:2em;
+}
+/* SW NOTE: This may not be selective enough.  */
+.sidebar > h1:first-of-type{
+	padding-top:0;
+}
+.sidebar > h1 + ul > h1,
+.sidebar > h1 + .pageBreak + ul > h1{
+	padding-top:0;
+}
+/* JH NOTE: Added these styles back in from bugFixes.css to fix the headings in sidebars. */
+/* SW NOTE: sidebars should be counted over like other figure types, shouldn't start with h2*/
+.sidebar > h2{
+	font-family:"HelveticaNeue-Bold";
+	/*color:black;*/
+	font-size:1em;
+	line-height:1.15em;
+	border-top:none;
+	padding-top:.3em;
+	margin-top:0;
+	margin-bottom:.6em;
+	padding-right:2em;
+	padding-bottom:0;
+}
+/* SW NOTE: Here is another h2 in a ul list */
+.sidebar > ul > h2{
+	font-family:"HelveticaNeue-BoldItalic";
+	/*color:black;*/
+	font-size:.8em;
+	line-height:1.15em;
+	padding-bottom:.62em;
+	padding-top:.33em;
+	padding-right:2em;
+	border-top:none;
+}
+/* SW NOTE: This may not be selective enough.  */
+.sidebar > h1:first-of-type{
+	padding-top:0;
+}
+.sidebar > h2 + ul > h2,
+.sidebar > h2 + .pageBreak + ul > h2{
+	padding-top:0;
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Side Quote Styles */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+.sideQuote{
+	border:2px solid #C2B397;
+	padding:.75em;
+	background-color:rgba(194, 179, 151, 0.2);
+	margin:.5em 0 1.5em 0;
+	-webkit-border-top-left-radius:.75em;
+	-webkit-border-bottom-right-radius:.75em;
+}
+.sideQuote > h1{
+	font-family:"HelveticaNeue-Bold";
+	font-size:.8em;
+	line-height:1.15em;
+	border-top:none;
+	padding-top:.0;
+	margin-top:0;
+	margin-bottom:0;
+	padding-right:2em;
+	padding-bottom:0;
+}
+.sideQuote > .subtitle{
+	font-family:"HelveticaNeue-LightItalic";
+	font-size:.8em;
+	line-height:1.33em;
+	text-indent:0;
+	padding-bottom:1.5em;
+}
+.sideQuote > .para{
+	font-family:"HelveticaNeue", "Helvetica-";
+	color:#7d7d7d;
+	text-indent:0;
+	font-size:.8em;
+	line-height:1.53em;
+}
+.sideQuote > .para > .emphasis{
+	font-family:"HelveticaNeue-Italic", "Helvetica-Oblique";
+}
+.sideQuote > .citationInfo > .para{
+	text-align:right;
+	padding-left:6em;
+}
+/* JH NOTE: Added these styles back in from bugFixes.css. */
+/* SW NOTE: The selectors below are bad. Figure's should start recounting with h1, h2 etc. I am currently not getting that so I have to do what I am doing below until it is fixed. */
+.sideQuote > h2,
+.sideQuote > h3{
+	font-family:"HelveticaNeue-Bold";
+	font-size:.8em;
+	line-height:1.15em;
+	border-top:none;
+	padding-top:.0;
+	margin-top:0;
+	margin-bottom:0;
+	padding-right:2em;
+	padding-bottom:0;
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Citation Class Styles */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+.citationInfo > .para{
+	font-family:"HelveticaNeue-LightItalic";
+	color:#7d7d7d;
+	font-size:.75em;
+	line-height:1.33em;
+	text-indent:0;
+}
+.citationInfo > .para .emphasis{
+	font-family:"HelveticaNeue-Light";
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Credit Class Styles */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+.credit > .para{
+	font-family:"HelveticaNeue-Light";
+	color:#7d7d7d;
+	font-size:.55em;
+	line-height:1.33em;
+	text-indent:0;
+}
+.credit > .para .emphasis{
+	font-family:"HelveticaNeue-LightItalic";
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Copyright Info Class Styles */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+.copyrightInfo > .para{
+	font-size:.8em;
+	line-height:1.33em;
+	padding-bottom:1em;
+	padding-top:.65em;
+}
+.copyrightInfo br{
+	display:inline;
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Quote Class Styles */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+.quote{
+	margin:0 1.5em .65em 1.5em;
+}
+.quote > .para{
+	font-family:"HelveticaNeue-LightItalic";
+	font-size:.85em;
+	text-indent:0;
+}
+.quote > .citationInfo > .para{
+	text-align:right;
+	padding-left:6em;
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Bio Class Styles */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+.bio > .para{
+	font-family:"HelveticaNeue-Light";
+	font-size:.75em;
+	line-height:1.33em;
+	text-indent:0;
+	padding-bottom:0;
+	text-align:right;
+	padding-left:6em;
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Table Styles */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+table{
+	margin:.0 auto 1em auto;
+}
+td{
+	font-size:.88em;
+	line-height:1.33em;
+	vertical-align:top;
+	padding:.5em .62em 0 .62em;
+	border:1px solid #C2C2C2;
+}
+th{
+	font-family:"HelveticaNeue-Bold";
+	font-size:.85em;
+	line-height:1.33em;
+	text-align:left;
+	vertical-align:top;
+	padding:.62em .62em 0 .62em;
+	width:auto; /* JH NOTE: Temporary fix for tables that have assigned width in HTML. */
+}
+th .para{
+	text-indent:0;
+	-webkit-hyphens:none;
+}
+td .para{
+	text-indent:0;
+	-webkit-hyphens:none;
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Callout Styles */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+.callout{
+	font-family:"HelveticaNeue-BoldItalic";
+	color:#7d7d7d;
+	font-size:.8em;
+	line-height:1.33em;
+	margin:0 1.5em .65em 1.5em;
+}
+.callout + .callout,
+.callout + .pageBreak + .callout{
+	margin-top:-.65em;
+}
+.callout > .para .emphasis{
+	font-family:"HelveticaNeue-Bold";
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Poetry Styles */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+.poetry{
+	padding-left:1.5em;
+	padding-bottom:.65em;
+}
+.poetry .title{
+	font-family:"HelveticaNeue-BoldItalic";
+	font-size:.85em;
+	line-height:1.15em;
+	padding-bottom:.62em;
+	padding-top:.33em;
+	padding-right:2em;
+}
+.stanza{
+	padding-left:1.5em;
+	padding-bottom:.65em;
+}
+.line{
+	font-family:"Palatino-Italic";
+	padding-bottom:0em;
+	text-indent:-1.5em;
+	-webkit-hyphens:auto;
+	-webkit-hyphenate-limit-before:4;
+	-webkit-hyphenate-limit-after:3;
+}
+.line > .emphasis{
+	font-family:"Palatino-Roman";
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* List Style Options */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+ul > .title{
+	font-size:.9em;
+	/*line-height:1.15em;*/
+	border-top:none;
+	margin-top:0;
+	margin-bottom:0;
+	padding-bottom:.62em;
+	padding-top:.33em;
+	position:relative;
+	left:-1.75em;
+}
+h2 + ul > .title,
+h2 + .pageBreak + ul > .title{
+	padding-top:0em;
+}
+/* JH NOTE: This fixes the numbering on lists that are inside tables. */
+td li{
+	list-style:none;
+}
+td .number li .label,
+td .alphaLowCase li .label,
+td .alpha li .label{
+	display:inline;
+	float:left;
+	margin-left:-1.5em;
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Byline Style Options */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+.byline .para:first-child{
+	font-family:"HelveticaNeue-Bold";
+	padding-bottom:0em;
+	margin-top:-2em;
+}
+.byline .para{
+	font-size:.75em;
+	line-height:1.33em;
+	text-indent:0;
+	font-family:"HelveticaNeue-LightItalic";
+	padding-bottom:4em;
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Byline Variations */
+.byline .para:only-child{
+	padding-bottom:5em;
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Media Specific Styles */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Print Styles */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+@media print{
+	body{
+		color:black;
+		border-color:black;
+		background-color:transparent;
+		font-size:12pt !important;
+		width: 80% !important;
+		margin: 36pt auto 36pt auto !important;
+	}
+	a,
+	[ref]{
+		color:black;
+	}
+}
+/* NOTE: The basic media queries are contained in the style_screenPresentations.css. This area is for style sheet specific media queries. */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* iPhone 5" landscape */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+@media screen and (max-width:568px) {
+	h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  .subtitle{
+		padding-right:0;
+		padding-left:0;
+  }
+  td{
+		border:none;
+	}
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* END OF STYLES */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */

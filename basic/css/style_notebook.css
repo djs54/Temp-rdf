@@ -1,0 +1,234 @@
+/* Classic Notebook Styles */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* 2013-12-17 */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Body Styles */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+body{
+	font-size:1em;
+	font-family:"Palatino-Roman";
+	line-height:1.33em;
+	text-align:left;
+}
+/* JH NOTE: Turning br's on so line breaks appear in notes. */
+br{
+	display:inline;
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Body Class Styles */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+p,
+.para,
+.verse{
+	padding-bottom:.65em;
+	-webkit-hyphens:auto;
+	-webkit-hyphenate-limit-before:4;
+	-webkit-hyphenate-limit-after:3;
+}
+.verseNumber{
+	font-size:.9em;
+	font-family:"Palatino-Bold";
+	padding-right:.33em;
+}
+.studyNoteMarker{
+	display:none;
+}
+.noteMarker{
+	display:none;
+}
+.smallCaps,
+.deitySmallCaps{
+	font-variant:small-caps;
+}
+.deityAllCaps{
+	text-transform:uppercase;
+}
+.allCaps{
+	text-transform:uppercase;
+}
+.keyWord,
+.clarityWord{
+	font-family:"Palatino-Italic";
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Heading Class Styles */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+h1{
+	font-family:"HelveticaNeue-Light";
+	font-size:2em;
+	line-height:1.15em;
+	border-top:1px solid;
+	padding-bottom:1.5em;
+	padding-top:.25em;
+	padding-right:2em;
+}
+.note > .title{
+	font-family:"HelveticaNeue-Bold";
+	font-size:1em;
+	line-height:1.15em;
+	padding-bottom:.62em;
+	padding-top:.33em;
+	padding-right:4em;
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Links Styles  */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+[ref]{
+	text-decoration:none;
+	color:#33322e;
+}
+/* JH NOTE: Changes the color of refs in night mode to match the rest of the text. */
+body[scheme = 'night'] [ref]{
+	color:#BABABA;
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Annotation Styles */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+.annotation:first-of-type{
+	border-top:none;
+	margin-top:0;
+	padding-top:0;
+
+}
+.annotation{
+	border-top:1px solid #c5c9cd;
+	margin-top:1.5em;
+	padding-top:1em;
+	position:relative;
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Note Styles */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+.note > .content{
+	font-family:"HelveticaNeue-Light";
+	font-size:.9em;
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Bookmark Styles */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+.bookmark > .citation{
+	font-family:"Palatino-Italic";
+	font-size:.8em;
+	line-height:1.33em;
+	display:inline-block;
+	padding-bottom:.8em;
+}
+.bookmark > .citation a:before{
+	padding-left:.25em;
+	content:"(";
+	color:#7d7d7d;
+}
+.bookmark > .citation a:after{
+	content:")";
+	color:#7d7d7d;
+}
+.bookmark .title{
+	font-family:"Palatino";
+	font-size:1em;
+	padding-bottom:.65em;
+	line-height:1em;
+	background:url(icon-bookmark@2x.png) no-repeat left 0;
+	background-size:.9em;
+	padding-left:1.2em;
+	display:inline-block;
+}
+.bookmark{
+	padding-bottom:0;
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Snippet Styles */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+.snippet{
+    padding:.85em .85em .85em .85em;
+	background-size:100% 13px;
+    background-color:#f7f7fa;
+/*	background-color:rgba(180, 170, 160, 0.2); */
+    margin: 0;
+/*	margin:.5em 0 1em 0; */
+	/*	-webkit-border-top-left-radius:.75em;
+	-webkit-border-bottom-right-radius:.75em;
+	-webkit-box-shadow:0 3px 4px 0 rgba(180, 170, 170, .6);*/
+}
+.content + .citation{ /* JH NOTE: Changed .text to .content to work with new HTML structure. */
+	display:block;
+	text-align:right;
+	padding-right:.75em;
+	padding-bottom:0;
+	font-family:"Palatino-Italic";
+	font-size:.9em;
+	line-height:1.33em;
+	color:#7d7d7d;
+}
+.pageBreak:after{
+	display:none;
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Related List Styles */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+.related li,
+.related li p{
+	display:inline;
+}
+.related li p a:after{
+	content:"; ";
+	color:#7d7d7d;
+}
+.related li:last-of-type p a:after{
+	content:none;
+}
+.related li .citation{
+	margin:0;
+	padding:0;
+}
+.related{
+	font-family:"HelveticaNeue-LightItalic";
+	font-size:.8em;
+	line-height:1.33em;
+	color:#7d7d7d;
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* EDIT MODE STYLES */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+.annotationEdit{
+	position:relative;
+		border-bottom:1px solid #c5c9cd;
+}
+.annotationEdit .annotationContent{
+	max-height:5.5em;
+	overflow:hidden;
+	margin-top:.35em;
+	margin-bottom:.85em;
+}
+.annotationEdit:first-of-type .annotationContent{
+	margin-top:0;
+}
+.delete{
+	position:absolute;
+	top:0;
+	height:100%;
+	margin-left:-32px;
+}
+.delete img{
+	position:absolute;
+	top:-webkit-calc(50% - 14px);
+	width:auto;
+	height:22px;
+	padding:0;
+}
+.handle{
+	position:absolute;
+	top:0;
+	right:-10px;
+	height:100%;
+}
+.handle img{
+	position:absolute;
+	top:-webkit-calc(50% - 14px);
+	width:auto;
+	height:22px;
+	padding:0;
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* END OF STYLES */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */

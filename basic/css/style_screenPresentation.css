@@ -1,0 +1,229 @@
+/* Screen Presentation Styles */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* 2013-12-05 */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Margin Styles */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* JH NOTE: Added 20px to all top and bottom margins to work with iOS 7 version. */
+#container {
+  padding:136px 13.5% 136px 13.5%;
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* iPad landscape + RCA live width 704px */
+@media screen and (max-width:706px){
+  #container {
+    padding: 136px 10% 136px 10%;
+  }
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* iPhone 5" landscape live width 568px */
+@media screen and (max-width:570px){
+  #container {
+    padding: 72px 7% 72px 7%;
+  }
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* iPad Portrait + RCA live width 448px */
+@media screen and (max-width:450px){
+  #container {
+    padding: 136px 10% 136px 10%;
+  }
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* iPhone portrait live width 320px */
+@media screen and (max-width:322px){
+  #container {
+    padding: 84px 11% 84px 11%;
+  }
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Night Styles */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* SW NOTE: should test and see if this can be accomplished with single selector and !important */
+body[scheme = 'night'],
+body[scheme = 'night'] .caption > p,
+body[scheme = 'night'] .citationInfo > .para,
+body[scheme = 'night'] .sideQuote > .para,
+body[scheme = 'night'] .credit > .para,
+body[scheme = 'night'] .annotation > .para,
+body[scheme = 'night'] .sidebar ul,
+body[scheme = 'night'] .sidebar ol,
+body[scheme = 'night'] .sidebar .para,
+body[scheme = 'night'] .sidebar .preamble,
+body[scheme = 'night'] .callout,
+body[scheme = 'night'] .heading .bio > .para,
+body[scheme = 'night'] .resources .citationInfo > .para,
+body[scheme = 'night'] .resources .bio > .para,
+body[scheme = 'night'] .poetry .citationInfo > .para{
+	color:#BABABA;
+	border-color:#EBEBEB;
+}
+body[scheme = 'night'] .sideQuote,
+body[scheme = 'night'] .sidebar,
+body[scheme = 'night'] .snippet{
+	border:1px solid #313131;
+	background-color:transparent;
+}
+body[scheme = 'night'] .annotation{
+border-top:1px solid #212121;
+}
+body[scheme = 'night'] a,
+body[scheme = 'night'] [ref]{
+	color:#66c4ff;
+}
+body[scheme = 'night'] .snippet{
+	background:none;
+	padding-bottom:.85em;
+}
+/* JH NOTE: Adding border around videos in night mode until posters are added. */
+body[scheme = 'night'] .video .video{
+	border:1px solid #313131;
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Hidden Styles */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+body[footnotes = 'hidden'] [ref]{
+	color:#33322e;
+}
+body[scheme = 'night'][footnotes = 'hidden'] [ref]{
+	color:#BABABA;
+}
+body[page-numbers = 'hidden'] span.pageBreak{
+  display:none;
+}
+body[summaries = 'hidden'] .studySummary{
+    display:none;
+}
+body[footnotes = 'hidden'] .studyNoteMarker,
+body[footnotes = 'hidden'] .noteMarker{
+    display:none;
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Media Specific Styles */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* NOTE Can this be simplified if the behavior does not change between the various screen sizes, it only needs to be declared at the point you want the change to happen all smaller screens should inherit it. */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* iPhone 5" landscape */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+@media screen and (max-width:568px) {
+	html{
+		-webkit-text-size-adjust:none;
+	}
+/*	h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  .subtitle{
+		padding-right:0;
+		padding-left:0;
+  }*/
+	.empty{
+		display:block;
+	}
+	table{
+		display:block;
+		border:1px solid #C2C2C2;
+		padding:.0 .5em 1em .5em;
+	}
+	tr{
+		display:block;
+		padding-top:.5em;
+	}
+	td,
+	th{
+		display:block;
+		min-height:1em;
+	}
+	td{
+		vertical-align:inherit;
+		padding:.0;
+		border:none;
+		padding-top:.5em;
+	}
+	th{
+		vertical-align:inherit;
+		padding:.0;
+		text-align:left;
+	}
+	td:not(:first-child){
+		padding-left:.5em;
+		border-left:1px solid #C2C2C2;
+	}
+	th:not(:first-child){
+		padding-left:.5em;
+		border-left:1px solid #C2C2C2;
+	}
+	td:nth-of-type(2),
+	th:nth-of-type(2){
+		margin-left:1em;
+	}
+	td:nth-of-type(3),
+	th:nth-of-type(3){
+		margin-left:2em;
+	}
+	td:nth-of-type(4),
+	th:nth-of-type(4){
+		margin-left:3em;
+	}
+	td:nth-of-type(5),
+	th:nth-of-type(5){
+		margin-left:4em;
+	}
+	td:nth-of-type(6),
+	th:nth-of-type(6){
+		margin-left:5em;
+	}
+	td:nth-of-type(7),
+	th:nth-of-type(7){
+		margin-left:6em;
+	}
+	td:nth-of-type(8),
+	th:nth-of-type(8){
+		margin-left:7em;
+	}
+	[uri $= '/bofm/toc.1'] td:nth-of-type(2),
+	[uri $= '/bofm/toc.1'] th:nth-of-type(2),
+	[uri $= '/pgp/toc.1'] td:nth-of-type(2),
+	[uri $= '/pgp/toc.1'] th:nth-of-type(2){
+		text-align: left;
+	}
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* iPhone landscape */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+@media screen and (max-width:480px){
+  .sideQuote{
+	margin:.5em 0 1.5em 0;
+	}
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* Page number in the margin */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+span.pageBreak{
+  display: block;
+  -webkit-transform-origin: 100% 100%;
+  position: absolute;
+  right: 12px;
+  z-index: -1;
+  -webkit-user-select: none;
+  font-family: Palatino-Roman;
+  font-size:12pt;
+	text-transform:none;
+	letter-spacing:.0;
+	text-align:right;
+  color:#8f8d83;
+}
+span.pageBreak:after{
+  content:attr(page-number);
+}
+@media screen and (max-width:570px){
+	span.pageBreak{
+		right: 4px;
+		-webkit-transform: rotate(-90deg);
+	}
+}
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
+/* END OF STYLES */
+/* - - - - - - - - - - - - - - - - - - - - - - - - */
