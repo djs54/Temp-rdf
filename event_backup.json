@@ -1,0 +1,16 @@
+{
+  "httpMethod": "POST",
+  "headers": {
+    "Content-Type": "application/json"
+  },
+  "body": "{\"content\": \"UEsDBBQABgAIAAAAIQCsCwkdpwEAAJsHAAATAAgCW0NvbnRlbnRfVHlwZXNdLnhtbCCiBAIooAACAAAAAAAAAAAAAAAAAAAAAAAA\"}",
+  "path": "/word",
+  "rawPath": "/word",
+  "queryStringParameters": null,
+  "multiValueQueryStringParameters": null,
+  "pathParameters": null,
+  "requestContext": {
+    "resourcePath": "/word",
+    "httpMethod": "POST"
+  }
+}
